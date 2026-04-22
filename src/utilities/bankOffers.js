@@ -1,37 +1,39 @@
-const bankOffers = [
+const bankOffersList = [
   {
+    bank: "Banque Populaire",
     id: "1",
-    provider: "Banque Populaire",
     amount: 200000,
-    interestRate: 3.5,
+    rate: 3.5,
     year: 2,
   },
   {
+    bank: "Crédit Agricole",
     id: "2",
-    provider: "Crédit Agricole",
     amount: 200000,
-    interestRate: 2.8,
+    rate: 2.8,
     year: 3,
   },
   {
+    bank: "BNP Paribas",
     id: "3",
-    provider: "BNP Paribas",
     amount: 200000,
-    interestRate: 3.2,
+    rate: 3.2,
     year: 4,
   },
   {
+    bank: "Société Générale",
     id: "4",
-    provider: "Société Générale",
     amount: 200000,
-    interestRate: 3.9,
+    rate: 3.9,
     year: 6,
   },
   {
+    bank: "CIH",
     id: "5",
-    provider: "CIC",
     amount: 200000,
-    interestRate: 3.1,
+    rate: 3.1,
     year: 7,
   },
 ];
+
+export default bankOffersList;
