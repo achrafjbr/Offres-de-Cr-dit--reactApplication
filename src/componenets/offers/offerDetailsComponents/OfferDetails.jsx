@@ -5,11 +5,14 @@ import dureeIcon from "../../../assets/icons/duree.png";
 import monthlyPaymentIcon from "../../../assets/icons/monthly-pay.png";
 import coutTotalIcon from "../../../assets/icons/cout-total.png";
 
-function OfferDetails({ offer }) {
+function OfferDetails({ offer, detailsRef }) {
   if (offer) {
     const [duree, monthlyPayment, total] = offer.data;
     return (
-      <div className="bg-white rounded-2xl shadow-2xl mx-auto sm:mx-0 w-full sm:w-[80%]  mt-5  px-3 py-5">
+      <div
+        ref={detailsRef}
+        className="bg-white rounded-2xl shadow-2xl mx-auto sm:mx-0 w-full sm:w-[80%]  mt-5  px-3 py-5"
+      >
         <Text
           text={`Détails de l'offre - ${offer.bank}`}
           style={"font-bold text-2xl text-[#00000]"}
