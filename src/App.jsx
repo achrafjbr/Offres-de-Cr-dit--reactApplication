@@ -16,7 +16,7 @@ function App() {
       offer.year,
     );
 
-    detailsRef.current.scrollIntoView({
+    detailsRef.current?.scrollIntoView({
       behavior: "smooth",
       block: "center",
       inline: "center",
