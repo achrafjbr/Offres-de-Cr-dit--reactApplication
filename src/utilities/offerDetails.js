@@ -23,7 +23,7 @@ const bankCalculatedOffer = (amount, rate, year) => {
   const calculatedOffer = [
     {
       calc: duration.year + " ans",
-      data: duration.year + " mensualités",
+      data: duration.monthlyPayment + " mensualités",
     },
 
     {
