@@ -5,9 +5,12 @@ const getOfferDuration = (year) => {
   };
 };
 
+const getInterest = (amount, rate, year) => {
+  return amount * rate * year;
+};
+
 const getTotal = (amount, rate, year) => {
-  const interest = amount * rate * year;
-  const total = interest + amount;
+  const total = getInterest(amount, rate, year) + amount;
   return total;
 };
 
@@ -19,7 +22,7 @@ const bankCalculatedOffer = (amount, rate, year) => {
   const duration = getOfferDuration(year);
   const monthlyPayment = getOfferMonthlyPayment(amount, rate, year);
   const total = getTotal(amount, rate, year);
-
+  const interest = getInterest(amount, rate, year);
   const calculatedOffer = [
     {
       calc: duration.year + " ans",
@@ -32,7 +35,7 @@ const bankCalculatedOffer = (amount, rate, year) => {
     },
     {
       calc: total + " DH",
-      data: " d'intérêts",
+      data: interest + " d'intérêts",
     },
   ];
   return calculatedOffer;
@@ -43,4 +46,5 @@ export {
   getOfferDuration,
   getOfferMonthlyPayment,
   bankCalculatedOffer,
+  getInterest,
 };
